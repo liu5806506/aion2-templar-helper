@@ -1,0 +1,78 @@
+# 永恒之塔2 守护星辅助脚本配置文件
+# 请根据你的游戏设置修改按键和参数
+
+# 控制设置
+control:
+  key_toggle: "F9"    # 开始/停止辅助的热键
+  key_exit: "F12"     # 退出程序的热键
+
+# 输入设置
+input:
+  type: "arduino"    # 输入类型: "keyboard" 或 "arduino"
+  serial_port: "COM7" # Arduino串口端口 (仅当input.type为arduino时使用)
+  baud_rate: 115200   # 串口波特率
+
+# 按键设置
+keys:
+  select_target: "tab"  # 选怪键
+  loot: "z"             # 拾取键
+  auto_attack: "r"      # 普通攻击键
+  defense: "f"          # 防御键
+
+# 技能配置
+skills:
+  starter:
+    key: "3"            # 起手技能
+    name: "起手技能"
+    priority: 1
+    cooldown: 1.5
+    delay: 1.0
+
+  # 示例技能配置
+  # violent_strike:
+  #   key: "mouse1"
+  #   name: "猛烈一击"
+  #   priority: 2
+  #   cooldown: 0.5
+  #   delay: 0.25
+
+# 选怪设置
+selection:
+  enabled: true         # 是否自动选怪
+  interval: 0.5         # 选怪间隔(秒)
+
+# 防御设置
+defense:
+  enabled: true         # 是否启用自动防御
+  health_threshold: 0.5 # 血量低于此比例时自动防御
+
+# 卡刀设置
+weave:
+  enabled: true         # 是否启用卡刀
+  attack_delay: 0.85    # 攻击延迟时间
+
+# 延迟设置
+delays:
+  between_skills: 1.2    # 技能间隔
+  after_loot: 0.5        # 拾取后延迟
+  find_target: 0.5       # 选怪频率
+  loop: 0.1              # 主循环延迟
+
+# 防检测设置
+anti_detection:
+  randomize_skill_delays: true   # 随机化技能延迟
+  human_like_pauses: true        # 模拟人类停顿
+  max_pause_duration: 0.5        # 最大停顿时间
+  pause_probability: 0.1         # 停顿概率
+  randomize_movement: true       # 随机化移动
+  max_random_movement: 20        # 最大随机移动像素
+  movement_probability: 0.05     # 随机移动概率
+
+# 图像识别设置
+image_recognition:
+  enabled: false        # 是否启用图像识别
+  target_health_region: [100, 100, 200, 20]  # 目标血条区域 [x, y, width, height]
+
+# 窗口管理设置
+window_management:
+  always_activate: false  # 是否始终激活游戏窗口

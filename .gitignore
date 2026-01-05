@@ -1,0 +1,16 @@
+# Python
+*.pyc
+__pycache__/
+
+# IDE
+.vscode/
+.idea/
+
+# Logs
+logs/
+*.log
+
+# Sensitive files
+*.pyc
+__pycache__/
+logs/
